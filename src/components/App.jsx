@@ -73,7 +73,16 @@ class App extends Component {
           {this.state.contacts.length > 0 ? (
             <Filter value={filter} onChangeFilter={this.changeFilter} />
           ) : (
-            <p>Your phonebook is empty. Add first contact!</p>
+            <p
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                fontSize: 20,
+              }}
+            >
+              Your phonebook is empty. Add first contact!
+            </p>
           )}
           <ContactsList
             contacts={visibleContacts}
